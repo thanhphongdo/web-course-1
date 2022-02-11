@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+</style>
+
 <body>
-    
+    <table>
+        <thead>
+            <tr>
+                <th style="width:30%">STT</th>
+                <th>Ten</th>
+                <th>Mon Toan</th>
+                <th>Mon Van</th>
+                <th>Tong</th>
+                <th>Ghi chu</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nguyen Van A</td>
+                <td>10</td>
+                <td>8</td>
+                <td>18</td>
+                <td rowspan="3"></td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nguyen Van B</td>
+                <td>7</td>
+                <td>8</td>
+                <td>15</td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nguyen Thi Nho</td>
+                <td>6</td>
+                <td>10</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="4" style="text-align:center;color:green;">TONG</th>
+                <th>50</th>
+            </tr>
+        </tfoot>
+    </table>
 </body>
+
 </html>
