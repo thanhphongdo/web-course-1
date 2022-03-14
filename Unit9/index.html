@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .dropdown {
+            width: 200px;
+            cursor: pointer;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-loggle {
+            padding: 10px;
+            padding-bottom: 0px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            position: relative;
+
+        }
+
+        .dropdown-menu {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            display: none;
+            border: 1px solid rgb(94, 74, 74);
+            /* red green blue la cac mau hinh thanh nen mau khac, rgba se co them anpha la do trong suot */
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+
+        .dropdown-item {
+            padding: 5px 10px;
+            position: relative;
+
+        }
+
+        .dropdown-item:hover.dropdown-item {
+            background: blue;
+        }
+
+        .dropdown-icon {
+            position: absolute;
+            right: 10px;
+
+        }
+
+        #dropdown-menu-children {
+            position: absolute;
+            left: 200px;
+            top: -2px;
+            width: 200px;
+            display: none;
+        }
+        .dropdown-item:hover #dropdown-menu-children{
+            display: block;
+        }
+        .dropdown-item #dropdown-menu-children2{
+            position: absolute;
+            left: 200px;
+            top: -2px;
+            width: 200px;
+            display: none;
+        }
+      
+        .dropdown-item #dropdown-menu-children .dropdown-item:hover #dropdown-menu-children2{
+            display: block;}
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <div class="dropdown-loggle"><span>Tutorial</span>
+            <i class="dropdown-icon fa-solid fa-caret-down"></i>
+        </div>
+        <ul class="dropdown-menu">
+            <li class="dropdown-item">
+                <span>HTML</span>
+            </li>
+            <li class="dropdown-item">
+                <span>CSS</span>
+                    <i class="fa-solid fa-caret-right dropdown-icon"></i>
+                
+                <ul class="dropdown-menu" id="dropdown-menu-children">
+                    <li class="dropdown-item">test1</li>
+                    <li class="dropdown-item">
+                        <span>test2</span>
+                        <i class="fa-solid fa-caret-right dropdown-icon"></i>
+                        <ul class="dropdown-menu" id="dropdown-menu-children2">
+                            <li class="dropdown-item">test2.1</li>
+                            <li class="dropdown-item">test2.2</li>
+                            <li class="dropdown-item">test2.3</li>
+                        </ul>
+
+                    </li>
+                    <li class="dropdown-item">test3</li>
+                </ul>
+            </li>
+            <li class="dropdown-item">
+                <span>JavaScript</span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

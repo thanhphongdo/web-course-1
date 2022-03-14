@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #idname {
+            margin: 15px 0px 20px 5px;
+            width: 300px;
+            height: 20px;
+        }
+        #idaddress {
+            margin: 15px 0px 20px 5px;
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+            <form action="chỗ lưu thông tin">
+            <label for="idname">Name</label><br>
+            <!-- for là để khi mình chọn vào label thì con chuột sẽ vào khung -->
+            <input type="text" id="idname" name="idname" placeholder="Your name"><br>
+            <label for="idaddress">Address</label><br>
+            <input type="text" id="idaddress" name="idaddress" placeholder="Your address">
+            <!-- name là để lấy giá trị của field ra, trong cùng 1 form nên để name là duy nhất, 2 form khác nhau có thể để name giống nhau -->
+            <!-- Name quan trọng nên có, id hem có cũng được, nhưng có id để làm CSS -->
+            <button type="submit">
+                Submit 
+            </button>
+            <br>
+            <!-- button cũng như submit, nhưng mà button thì phải dùng thêm javascript mới gửi được, còn submit thì gửi tự động -->
+            <!-- radio thì cái name phải giống nhau, còn checkbox thì khác hay giống đều được -->
+            <select name="fruits" id="fruits">Bạn thích trái gì?
+                <option value="Apple">Táo</option>
+                <option value="Banana">Chuối</option>
+                <!-- value sẽ là thông tin khi mình lấy sẽ cho mình  -->
+            </select>
+        </form>
+    
+</body>
+</html>

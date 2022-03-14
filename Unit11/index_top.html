@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin-top: 50px;
+
+        }
+
+        .tooltip .tooltip-content {
+            position: absolute;
+            background-color: aqua;
+            color: black;
+            border-radius: 5px;
+            padding: 5px;
+            width: 200px;
+            top: -40px;
+            left: 50%;
+            margin-left: -100px;
+            box-sizing: border-box;
+            visibility: hidden;
+        }
+
+        .tooltip .tooltip-content::after {
+            content: "";
+            border-width: 10px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            margin-left: -10px;
+
+        }
+        .tooltip:hover .tooltip-content{
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body style="text-align:center;">
+    <div class="tooltip">Hover me
+        <span class="tooltip-content">Good luck</span>
+    </div>
+</body>
+
+</html>
