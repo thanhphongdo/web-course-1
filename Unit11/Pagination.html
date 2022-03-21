@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pagination {
+            display: flex;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .pagination a {
+            font-size: 5em;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .pagination a.active {
+            background-color: beige;
+            color: peru;
+            border-radius: 8px;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: rgb(221, 221, 221);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menubar {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            background: #333;
+            margin: 20px 0px;
+            padding-inline-start: 0px;
+            
+        }
+
+        li {
+            padding: 16px 20px;
+            color: white;
+            position: relative;
+        }
+
+        li:hover {
+            background-color: #111;
+        }
+
+
+        .dropdown-menu {
+            padding-inline-start: 0px;
+            padding-bottom: 0px;
+            border: 1px solid#333;
+            border-radius: 4px;
+            left:100px;
+            position: absolute;
+            margin-top: -35px;
+            display: none;
+            width: 200px;
+
+        }
+
+        .dropdown-menu .dropdown-item {
+            list-style-type: none;
+            color: white;
+            background-color: #111;
+            padding: 16px 10px;
+
+        }
+
+        .menubar>li:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu>.dropdown-item:hover{
+            background-color: #333;
+        }
+        .dropdown-menu2 {
+            padding-inline-start: 0px;
+            padding-bottom: 0px;
+            border: 1px solid#333;
+            border-radius: 4px;
+            left:200px;
+            position: absolute;
+            margin-top: -35px;
+            display: none;
+            width: 200px;
+
+        }
+        .dropdown-menu2 .dropdown-item2 {
+            list-style-type: none;
+            color: white;
+            background-color: #111;
+            padding: 16px 10px;
+
+        }
+
+        .dropdown-menu>li:hover .dropdown-menu2 {
+            display: block;
+        }
+        .dropdown-menu2>.dropdown-item:hover{
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menubar">
+        <li>
+            <a class="active" href="#home">Home</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item">Google
+                    <ul class="dropdown-menu2">
+                        <li class="dropdown-item">Google1</li>
+                        <li class="dropdown-item">Google2</li>
+                        <li class="dropdown-item">Google3</li>
+                    </ul>
+                </li>
+                <!-- thêm 1 cấp dropdown cho GG -->
+                <!-- làm thêm 1 bài navigation bar theo chiều dọc -->
+                <li class="dropdown-item">Youtube</li>
+                <li class="dropdown-item">Facebook</li>
+            </ul>
+        </li>
+        <li>Font</li>
+        <li>Develop</li>
+        <li>Acrobat</li>
+    </ul>
+</body>
+
+</html>
