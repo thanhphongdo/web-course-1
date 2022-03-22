@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .menubar {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            background: #000;
+            padding-inline-start: 0px;
+            font-size: 15px;
+
+        }
+
+        .menu-item {
+            padding: 8px 16px;
+            color: #fff;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            background-color: #ccc;
+            color: #000;
+        }
+
+
+        .tooltip-content {
+           
+            text-align: left;
+            border: none;
+            width: 100%;
+            display: none;
+        
+
+        }
+
+        .tooltip-content .tooltip-dropdown {
+            list-style-type: none;
+            color: #000;
+            background-color: yellow;
+            padding: 8px 8px;
+            width: 160px;
+            position: absolute;
+
+        }
+
+        .menubar>.menu-item:hover .tooltip-content {
+            display: block;
+        }
+
+        .tooltip-content>.tooltip-dropdown:hover {
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="menubar">
+            <li class="menu-item">HOME</li>
+            <li class="menu-item">BAND</li>
+            <li class="menu-item">TOUR</li>
+            <li class="menu-item">CONTACT</li>
+            <li class="menu-item">MORE
+                <i class="fa fa-sort-down"></i>
+                <ul class="tooltip-content">
+                    <li class="tooltip-dropdown">Merchandise</li>
+                    <li class="tooltip-dropdown">Extras</li>
+                    <li class="tooltip-dropdown">Media</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
