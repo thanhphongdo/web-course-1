@@ -8,14 +8,16 @@
     <title>Band Template</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
+
         body {
             padding: 0px;
             margin: 0px;
-            font-family: Verdana,sans-serif;
+            font-family: Verdana, sans-serif;
         }
+
         .menubar {
             list-style-type: none;
             display: flex;
@@ -47,6 +49,7 @@
             margin-top: 8px;
             display: none;
             left: -40px;
+            z-index: 1;
         }
 
         .dropdown-content .dropdown-item {
@@ -65,29 +68,126 @@
         .dropdown-content>.dropdown-item:hover {
             background-color: #ccc;
         }
-        .fa{
+
+        .fa {
             position: absolute;
             padding-left: 5px;
         }
-        .img1{
+
+        .img1 {
             position: relative;
         }
-        .text1{
+
+        .text1 {
             color: #fff;
             display: block;
             font-weight: bold;
             position: absolute;
             bottom: 30px;
             text-align: center;
-            
+            width: 100%;
+
         }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Segoe UI",Arial,sans-serif;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Segoe UI", Arial, sans-serif;
             font-weight: 400;
             margin: 10px 0;
         }
-        h3{
+
+        h3 {
             font-size: 24px;
+        }
+
+        .theband {
+            letter-spacing: 4px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .lovemusic {
+            text-align: center;
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .longtext {
+            text-align: justify;
+        }
+
+        .photos {
+            float: left;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            text-align: center;
+
+        }
+
+        .photo123 {
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        div {
+            display: block;
+        }
+
+        img {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        @media (min-width:603px) {
+            .photos {
+                width: 33.33333%;
+            }
+        }
+
+        .black {
+            clear: both;
+            background-color: #000;
+            color: #fff;
+            padding: 0px 8px;
+        }
+
+        .white {
+            color: #757575;
+            background: #fff;
+            border: 1px solid #ccc;
+            list-style: none;
+            display: block;
+            padding-inline-start: 40px;
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .padding {
+            padding: 8px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .red {
+            margin-left: 16px;
+            color: #fff;
+            background: #f44336;
+        }
+
+        .number {
+            margin-right: 16px;
+            float: right;
+            border-radius: 50%;
+            background-color: #000;
+            color: #fff;
+            display: inline-block;
+            padding-left: 6px;
+            padding-right: 6px;
+            text-align: center;
         }
     </style>
 </head>
@@ -112,10 +212,43 @@
     <div class="img1">
         <img src="./chicago.jpg" alt="Chicago" style="width:100%">
         <div class="text1">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago - A Night we don't forget</p>
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago - A Night we don't forget</p>
         </div>
+    </div>
+    <div>
+        <h2 class="theband">THE BAND</h2>
+        <p class="lovemusic">We love music</p>
+        <p class="longtext">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="photos">
+        <p>Name</p>
+        <img src="./bandmember.jpg" alt="bandmember" class="photo123" style="width:60%">
 
+    </div>
+    <div class="photos">
+        <p>Name</p>
+        <img src="./bandmember.jpg" alt="bandmember" class="photo123" style="width:60%">
+
+    </div>
+    <div class="photos">
+        <p>Name</p>
+        <img src="./bandmember.jpg" alt="bandmember" class="photo123" style="width:60%">
+    </div>
+    <div class="black">
+        <h2 class="theband">TOUR DATES</h2>
+        <p class="lovemusic">Remember to book your tickets</p>
+        <ul class="white">
+            <li class="padding">September <span class="red">Sold out</span></li>
+            <li class="padding">October <span class="red">Sold out</span></li>
+            <li class="padding">November <span class="number">3</span> </li>
+        </ul>
     </div>
 </body>
 
