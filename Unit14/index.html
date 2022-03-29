@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0px;
+            font-family: "Lato", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .menu {
+            background: #000;
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.5;
+            display: flex;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .menu-item {
+            padding: 12px 24px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .menu-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .dropdown-menu>.fa-solid {
+            margin-left: 10px;
+        }
+
+        .search-icon {
+            align-self: center;
+            flex: 1;
+            text-align: right;
+            padding-right: 24px;
+            cursor: pointer;
+        }
+
+        .banner {
+            position: relative;
+            margin-top: 46px;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .message {
+            color: #fff;
+            position: absolute;
+            bottom: 4px;
+            width: 100%;
+            text-align: center;
+            padding: 32px 0px;
+        }
+
+        .band-content {
+            text-align: center;
+            margin: auto;
+            width: 800px;
+            padding: 64px 0px;
+        }
+
+        .band-message {
+            text-align: justify;
+        }
+
+        .band-content h2 {
+            font-size: 30px;
+        }
+
+        .band-content i {
+            font-size: 15px;
+        }
+
+        .band-img {
+            display: flex;
+            padding: 32px 0px;
+        }
+
+        .band-img-item {
+            padding: 0px 32px;
+        }
+
+        .band-img-item>img {
+            width: 100%;
+        }
+
+        .tour-date-container {
+            background-color: #000;
+        }
+
+        .tour-dates {
+            text-align: center;
+            margin: auto;
+            width: 800px;
+            padding: 64px 0px;
+            color: #fff;
+        }
+
+        .tours {
+            background: #fff;
+            color: #757575;
+        }
+
+        .tour-item {
+            padding: 8px 16px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+        }
+
+        .tour-item>div {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .sold-out {
+            padding: 0px 8px;
+            margin-left: 16px;
+            background-color: #f44336;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .tour-slot {
+            background-color: #000;
+            font-size: 15px;
+            color: #ddd;
+            border-radius: 50%;
+            padding: 4px;
+            width: 26px;
+            text-align: center;
+        }
+        .contact{
+            padding: 64px 16px;
+            position: relative;
+        }
+        .contact h2 {
+            text-align: center;
+            letter-spacing: 4px;
+            margin: 10px 0;
+            font-size: 30px;
+            width: 665px;
+            padding: 0;
+            color: #000;
+            line-height: 1.5;
+        }
+        .contact p{
+            text-align: center;
+            font-size: 15px;
+        }
+        .contact-info{
+            padding: 32px 0;
+    
+        }
+        .contact-detailed{
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+        .contact-item{
+            line-height: 1.5;
+        }
+        .regis-item{
+            display: block;
+            position: absolute;
+            float: left;
+        }
+        .item{
+            padding: 8px;
+            border: 1px solid #ccc;
+            margin: 0px;
+        }
+        .button{
+            color: #fff;
+            background: #000;
+            padding: 8px 16px;
+            margin: 16px 0px;
+            cursor: pointer;
+            border: none;
+            float: right;
+        }
+        .button:hover{
+            background-color: #ccc;
+            color: #000;
+        }
+        .address{
+            width: 100%;
+        }
+        .footer{
+            padding: 64px 16px;
+            display: inline-block;
+            text-align: center;
+            
+        }
+        .fa{
+            font-size: inherit;
+        }
+        .footer>i:hover i{
+            background-color: #f1f1f1;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-menu">
+        <div class="menu">
+            <div class="menu-item"><a href="#">Home</a></div>
+            <div class="menu-item"><a href="#">Band</a></div>
+            <div class="menu-item"><a href="#">Tour</a></div>
+            <div class="menu-item"><a href="#">Contact</a></div>
+            <div class="menu-item dropdown-menu">
+                <a href="#">More</a>
+                <i class="fa-solid fa-sort-down"></i>
+            </div>
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div>
+            <img src="https://www.w3schools.com/w3images/la.jpg" />
+        </div>
+        <div class="message">
+            <h3>Los Angeles</h3>
+            <div>
+                <b>Thank you, Chicago - A night we won't forget.</b>
+            </div>
+        </div>
+    </div>
+    <div class="band-content">
+        <h2>THE BAND</h2>
+        <p>
+            <i>We love music</i>
+        </p>
+        <p class="band-message">
+            We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <div class="band-img">
+            <div class="band-img-item">
+                <p>Name</p>
+                <img src="https://www.w3schools.com/w3images/bandmember.jpg" />
+            </div>
+            <div class="band-img-item">
+                <p>Name</p>
+                <img src="https://www.w3schools.com/w3images/bandmember.jpg" />
+            </div>
+            <div class="band-img-item">
+                <p>Name</p>
+                <img src="https://www.w3schools.com/w3images/bandmember.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="tour-date-container">
+        <div class="tour-dates">
+            <h2>TOUR DATES</h2>
+            <p>
+                <i>Remember to book your tickets!</i>
+            </p>
+            <div class="tours">
+                <div class="tour-item">
+                    <span>September</span>
+                    <span class="sold-out">Sold out</span>
+                </div>
+                <div class="tour-item">
+                    <span>September</span>
+                    <span class="sold-out">Sold out</span>
+                </div>
+                <div class="tour-item">
+                    <span>September</span>
+                    <div>
+                        <div class="tour-slot">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <h2>CONTACT</h2>
+        <p>
+            <i>Fan? Drop a note!</i>
+        </p>
+        <div class="contact-info">
+            <div class="contact-detailed">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot" style="width: 30px"></i> Chicago, US
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone" style="width: 30px"></i> Phone: +00 151515
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope" style="width: 30px"></i> Email: mail@mail.com
+                </div>
+
+            </div>
+            <div class="regis-info">
+                <div class="regis-item">
+                    <input class="item name" type="text" placeholder="Name" >
+                    <input class="item email" type="text" placeholder="Email">
+                    <input class="item regis-message" type="text" placeholder="Message">
+                    <button class="button" type="submit">SEND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="address">
+        <img src="https://www.w3schools.com/w3images/map.jpg" alt="">
+    </div>
+    <div class="footer">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-snapchat-square"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <p class="power">Powered by w3.css</p>
+
+    </div>
+</body>
+
+</html>
