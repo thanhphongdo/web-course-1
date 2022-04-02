@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            font-size: 15px;
+            line-height: 1.5;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            padding: 24px 16px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu>p {
+            padding: 8px 16px;
+            margin: 0px;
+            cursor: pointer;
+        }
+
+        .banner {
+            display: flex;
+            margin: auto;
+        }
+
+        .banner-left {
+            flex: 1;
+        }
+
+        .banner-left img {
+            width: 100%;
+            margin-bottom: -8px;
+        }
+
+        .banner-right {
+            flex: 1;
+        }
+
+        .banner-right img {
+            width: 100%;
+            margin-bottom: -8px;
+        }
+
+        .content {
+            padding: 64px 0px;
+            text-align: center;
+        }
+
+        .about {
+            text-align: center;
+            font-size: 30px;
+            margin: 10px 0px;
+        }
+
+        .content img {
+            padding: 32px 0px;
+            width: 300px;
+        }
+
+        .form {
+            width: 60%;
+            margin: auto;
+        }
+
+        .sharing {
+            margin: 15px 0px;
+        }
+
+        .message {
+            color: red;
+            margin: 18px 0px;
+            font-size: 18px;
+        }
+        .contact-info{
+            margin: 16px 0px;
+        }
+        .contact-info>label{
+            cursor: default;
+            font-weight: bold;
+        }
+        .contact-info>input{
+            padding: 8px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+            
+        }
+        .contact-info>button{
+            width: 100%;
+            padding: 8px 16px;
+            color: white;
+            background-color: #616161;
+            cursor: pointer;
+            text-align: center;
+        
+        }
+        .footer{
+            margin: 15px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <p>MY ART</p>
+        <p>About</p>
+    </div>
+    <div class="banner">
+        <div class="banner-left">
+            <img src="https://www.w3schools.com/w3images/streetart.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/streetart2.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/streetart5.jpg" alt="">
+        </div>
+        <div class="banner-right">
+            <img src="https://www.w3schools.com/w3images/streetart3.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/streetart4.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="about">About</div>
+        <img src="https://www.w3schools.com/w3images/boy.jpg" alt="">
+        <form action="abc.com" class="form">
+            <div class="sharing">Just me, myself and I, exploring the universe of unknownment. I have a heart of love
+                and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent
+                tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue
+                gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta
+                lectus vitae, ultricies congue gravida diam non fringilla.</div>
+            <div class="message">Do not hesitate to contact me!</div>
+            <div class="contact-info">
+                <label for="name">Name</label>
+                <input type="text">
+            </div>
+            <div class="contact-info">
+                <label for="email">Email</label>
+                <input type="text">
+            </div>
+            <div class="contact-info">
+                <label for="message">Message</label>
+                <input type="text">
+            </div>
+            <div class="contact-info">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <div class="footer">Powered by w3.css</div>
+    </div>
+
+</body>
+
+</html>
